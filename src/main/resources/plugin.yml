@@ -1,0 +1,15 @@
+name: BankEXP
+description: '${description}'
+version: '${version}'
+
+main: org.soclabs.bankEXP.BankEXP
+api-version: '26.1'
+
+authors: [ ShadowOnce ]
+website: soclabs.me
+
+commands:
+  bank:
+    description: Comando principal del plugin
+    aliases:
+      - banco
