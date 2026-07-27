@@ -32,6 +32,6 @@ public final class BankEXP extends JavaPlugin {
     }
 
     public void registrarComando() {
-        this.getCommand("bank").setExecutor(new MainCommand());
+        this.getCommand("bank").setExecutor(new MainCommand(this));
     }
 }

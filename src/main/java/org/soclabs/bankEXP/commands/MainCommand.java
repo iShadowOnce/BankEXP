@@ -9,6 +9,12 @@ import org.soclabs.bankEXP.utils.MessageUtils;
 
 public class MainCommand implements CommandExecutor {
 
+    private BankEXP plugin;
+
+    public MainCommand(BankEXP plugin) {
+        this.plugin = plugin;
+    }
+
     @Override
     public boolean onCommand(CommandSender sender, Command command, String alias, String[] args) {
 
@@ -18,6 +24,9 @@ public class MainCommand implements CommandExecutor {
                 if(args[0].equalsIgnoreCase("help") || args[0].equalsIgnoreCase("ayuda")) {
                     // /bank help - /banco ayuda
                     help(sender);
+                } else if (args[0].equalsIgnoreCase("get")) {
+                    // /bank get <autor/version>
+                    subCommandGet(sender, args);
                 } else {
                     // /banco usar - /banco transferir - /banco info ...
                     sender.sendMessage(MessageUtils.getColoredMenssage(
@@ -52,9 +61,13 @@ public class MainCommand implements CommandExecutor {
                 // /banco info
                 sender.sendMessage(MessageUtils.getColoredMenssage(
                         BankEXP.prefix+"&bHola &e"+player.getName()+" &bActualmente tienes &e"+player.getExp()+" &eExperiencia&b, puedes guardarla en el banco."));
+            } else if (args[0].equalsIgnoreCase("get")) {
+                // /bank get <autor/version>
+                subCommandGet(sender, args);
             } else {
                 help(sender);
             }
+
         } else {
             // Se ejecuta cuando el jugador solo usa /bank, es decir, sin args.
             help(sender);
@@ -81,5 +94,42 @@ public class MainCommand implements CommandExecutor {
         sender.sendMessage(MessageUtils.getColoredMenssage(
                 "&e&l---> &a&l COMANDOS ESENCIALES &e&l<---"
         ));
+
+
+        sender.sendMessage(MessageUtils.getColoredMenssage(
+                ""
+        ));
+
+        sender.sendMessage(MessageUtils.getColoredMenssage(
+                "&e&l---> &c&l COMANDOS ADMINISTRACION &e&l<---"
+        ));
+        sender.sendMessage(MessageUtils.getColoredMenssage(
+                "&a- &e/bank get version &a-> &bVer la version del plugin."
+        ));
+        sender.sendMessage(MessageUtils.getColoredMenssage(
+                "&a- &e/bank get autor &a-> &bVer el autor del plugin."
+        ));
+    }
+
+    public void subCommandGet(CommandSender sender, String[] args) {
+        if(args.length == 1) {
+            // bank get version
+            sender.sendMessage(MessageUtils.getColoredMenssage(
+                    BankEXP.prefix+"&b Debes usar &e/bank get <autor/version>"));
+            return;
+        }
+
+        if(args[1].equalsIgnoreCase("autor")) {
+            // bank get autor
+            sender.sendMessage(MessageUtils.getColoredMenssage(
+                    BankEXP.prefix+"&b El autor del plugin es: &e"+plugin.getDescription().getAuthors()));
+        } else if (args[1].equalsIgnoreCase("version")) {
+            // bank get version
+            sender.sendMessage(MessageUtils.getColoredMenssage(
+                    BankEXP.prefix+"&b La version del plugin es: &e"+plugin.getDescription().getVersion()));
+        } else {
+            sender.sendMessage(MessageUtils.getColoredMenssage(
+                    BankEXP.prefix+"&b Debes usar &c/bank get <autor/version>"));
+        }
     }
 }
