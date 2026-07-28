@@ -60,7 +60,7 @@ public class MainCommand implements CommandExecutor {
             } else if (args[0].equalsIgnoreCase("info")) {
                 // /banco info
                 sender.sendMessage(MessageUtils.getColoredMenssage(
-                        BankEXP.prefix+"&bHola &e"+player.getName()+" &bActualmente tienes &e"+player.getExp()+" &eExperiencia&b, puedes guardarla en el banco."));
+                        BankEXP.prefix+"&bHola &e"+player.getName()+" &bActualmente tienes &e"+player.getLevel()+" &eNiveles de Experiencia&b, puedes guardarlos en el banco."));
             } else if (args[0].equalsIgnoreCase("get")) {
                 // /bank get <autor/version>
                 subCommandGet(sender, args);
