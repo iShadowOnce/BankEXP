@@ -1,0 +1,7 @@
+# Idioma del plugin.
+# Debe corresponder al nombre (sin extension) de un archivo dentro de la carpeta "language".
+# Por defecto: es (Español). Tambien disponible: en (Ingles).
+#
+# Para crear tu propia traduccion, duplica un archivo de la carpeta "language",
+# renombralo (ej: fr.yml), edita sus mensajes y colores a tu gusto, y coloca aqui ese nombre.
+language: es

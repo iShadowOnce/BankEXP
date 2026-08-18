@@ -11,5 +11,3 @@ website: soclabs.me
 commands:
   bank:
     description: Comando principal del plugin
-    aliases:
-      - banco

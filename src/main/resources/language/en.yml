@@ -1,0 +1,28 @@
+# Language: English
+# You can use Minecraft color codes with "&" (e.g: &a, &c, &l).
+
+prefix: "&e[&aBankEXP&e] "
+
+console:
+  player-only: "&cYou can only use this command as a player."
+  enabled: "&bBankEXP has been &aenabled. &eVersion: %version%"
+  disabled: "&bBankEXP has been &cdisabled. &eVersion: %version%"
+
+command:
+  in-development: "&c Feature under development."
+  info: "&bHello &e%player% &byou currently have &e%level% &eExperience Levels."
+  get-usage: "&b You must use &e/bank get <author/version>"
+  get-usage-error: "&b You must use &c/bank get <author/version>"
+  get-author: "&b The plugin author is: &e%author%"
+  get-version: "&b The plugin version is: &e%version%"
+
+help:
+  header: "&e&l---> &a&l EXPERIENCE BANK &e&l<---"
+  help: "&a- &e/bank help &a-> &bAvailable commands."
+  info: "&a- &e/bank info &a-> &bShow personal information."
+  use: "&a- &e/bank use &a-> &bOpen the Experience Bank."
+  transfer: "&a- &e/bank transfer &a-> &bTransfer Experience to other users."
+  essential-header: "&e&l---> &a&l ESSENTIAL COMMANDS &e&l<---"
+  admin-header: "&e&l---> &c&l ADMIN COMMANDS &e&l<---"
+  get-version: "&a- &e/bank get version &a-> &bSee the plugin version."
+  get-author: "&a- &e/bank get author &a-> &bSee the plugin author."

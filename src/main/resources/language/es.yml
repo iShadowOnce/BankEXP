@@ -1,0 +1,28 @@
+# Idioma: Español (idioma por defecto del plugin)
+# Puedes usar los codigos de color de Minecraft con "&" (ej: &a, &c, &l).
+
+prefix: "&e[&aBancoEXP&e] "
+
+console:
+  player-only: "&cSolo puedes usar este comando desde un jugador."
+  enabled: "&bBankEXP ha sido &aactivado. &eVersion: %version%"
+  disabled: "&bBankEXP ha sido &cdesactivado. &eVersion: %version%"
+
+command:
+  in-development: "&c Funcionalidad en desarrollo."
+  info: "&bHola &e%player% &bActualmente tienes &e%level% &eNiveles de Experiencia."
+  get-usage: "&b Debes usar &e/bank get <author/version>"
+  get-usage-error: "&b Debes usar &c/bank get <author/version>"
+  get-author: "&b El autor del plugin es: &e%author%"
+  get-version: "&b La version del plugin es: &e%version%"
+
+help:
+  header: "&e&l---> &a&l BANCO DE EXPERIENCIA &e&l<---"
+  help: "&a- &e/bank help &a-> &bComandos disponibles."
+  info: "&a- &e/bank info &a-> &bMostrar informacion personal."
+  use: "&a- &e/bank use &a-> &bAbrir Banco de Experiencia."
+  transfer: "&a- &e/bank transfer &a-> &bTransferir Experiencia a otros usuarios."
+  essential-header: "&e&l---> &a&l COMANDOS ESENCIALES &e&l<---"
+  admin-header: "&e&l---> &c&l COMANDOS ADMINISTRACION &e&l<---"
+  get-version: "&a- &e/bank get version &a-> &bVer la version del plugin."
+  get-author: "&a- &e/bank get author &a-> &bVer el autor del plugin."
