@@ -48,7 +48,7 @@ public class MainCommand implements CommandExecutor {
                 sender.sendMessage(MessageUtils.getPrefixedMessage("command.in-development"));
             } else if (args[0].equalsIgnoreCase("use")) {
                 // /bank use
-                sender.sendMessage(MessageUtils.getPrefixedMessage("command.in-development"));
+                plugin.getMenuInventoryManager().openBankMenu(player);
             } else if (args[0].equalsIgnoreCase("transfer")) {
                 // /bank transfer
                 sender.sendMessage(MessageUtils.getPrefixedMessage("command.in-development"));

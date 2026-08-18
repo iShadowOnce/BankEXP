@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.soclabs.bankEXP.commands.MainCommand;
 import org.soclabs.bankEXP.language.LanguageManager;
+import org.soclabs.bankEXP.managers.MenuInventoryManager;
 import org.soclabs.bankEXP.utils.MessageUtils;
 
 public final class BankEXP extends JavaPlugin {
@@ -11,6 +12,7 @@ public final class BankEXP extends JavaPlugin {
     private static BankEXP instance;
 
     private LanguageManager languageManager;
+    private MenuInventoryManager menuInventoryManager;
     private String version;
 
     @Override
@@ -21,6 +23,8 @@ public final class BankEXP extends JavaPlugin {
         saveDefaultConfig();
         languageManager = new LanguageManager(this);
         languageManager.setup();
+
+        menuInventoryManager = new MenuInventoryManager(this);
 
         registrarComando();
 
@@ -46,5 +50,9 @@ public final class BankEXP extends JavaPlugin {
 
     public LanguageManager getLanguageManager() {
         return languageManager;
+    }
+
+    public MenuInventoryManager getMenuInventoryManager() {
+        return menuInventoryManager;
     }
 }

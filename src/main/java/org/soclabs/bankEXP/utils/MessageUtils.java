@@ -9,7 +9,7 @@ public class MessageUtils {
         return ChatColor.translateAlternateColorCodes('&', message);
     }
 
-    public static String getMessage(String path, String... placeholders) {da
+    public static String getMessage(String path, String... placeholders) {
         String message = applyPlaceholders(getRawMessage(path), placeholders);
         return getColoredMenssage(message);
     }

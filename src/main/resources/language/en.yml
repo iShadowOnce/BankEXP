@@ -26,3 +26,7 @@ help:
   admin-header: "&e&l---> &c&l ADMIN COMMANDS &e&l<---"
   get-version: "&a- &e/bank get version &a-> &bSee the plugin version."
   get-author: "&a- &e/bank get author &a-> &bSee the plugin author."
+
+menu:
+  bank-title: "&bExperience Bank"
+  bank-open: "&bYou have opened the Experience Bank."
